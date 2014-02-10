@@ -7,10 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "LaunchAtLoginController.h"
 @interface QEAppDelegate : NSObject <NSApplicationDelegate, NSTextFieldDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @property (weak) IBOutlet NSTextField *textField;
+@property (strong, nonatomic) LaunchAtLoginController *loginAutoCor;
+@property (weak) IBOutlet NSButton *checkBox;
 @end

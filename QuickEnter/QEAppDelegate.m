@@ -26,6 +26,10 @@
     menuItem.tag = 1;
     [menu addItem:menuItem];
     
+    menuItem = [[NSMenuItem alloc]initWithTitle:@"Auto Launch" action:@selector(menuItemBeClicked:) keyEquivalent:@""];
+    [menuItem setView:self.checkBox];
+    [menu addItem:menuItem];
+    
     menuItem = [[NSMenuItem alloc]initWithTitle:@"Quit" action:@selector(menuItemBeClicked:) keyEquivalent:@""];
     menuItem.tag = 2;
     [menu addItem:menuItem];
@@ -33,9 +37,15 @@
     [self.statusItem setMenu:menu];
     self.textField.delegate = self;
     
+    //add shortcut.
     DDHotKeyCenter *c = [DDHotKeyCenter sharedHotKeyCenter];
 	[c unregisterHotKeyWithKeyCode:kVK_Escape modifierFlags:NSControlKeyMask];
     [c registerHotKeyWithKeyCode:kVK_Escape modifierFlags:NSControlKeyMask target:self action:@selector(hotkeyWithEvent:) object:nil];
+    
+    //launch auto
+    self.loginAutoCor = [[LaunchAtLoginController alloc] init];
+    [self.loginAutoCor setLaunchAtLogin:NO];
+    self.checkBox.state = 0;
     
 }
 - (void)applicationDidResignActive:(NSNotification *)notification {
@@ -44,6 +54,7 @@
 }
 
 #pragma mark - User InterAction
+
 - (void)menuItemBeClicked:(NSMenuItem *)menuItem {
     
     if (menuItem.tag==1) {
@@ -67,6 +78,12 @@
     
     
 }
+- (IBAction)autoLaunchAfterLogin:(NSButton *)sender {
+    
+    [self.loginAutoCor setLaunchAtLogin:sender.state];
+}
+
+
 
 #pragma mark - logic
 

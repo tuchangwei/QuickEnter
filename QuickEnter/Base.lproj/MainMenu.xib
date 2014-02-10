@@ -669,10 +669,22 @@
         </window>
         <customObject id="494" customClass="QEAppDelegate">
             <connections>
+                <outlet property="checkBox" destination="CBx-On-h7a" id="VGe-jM-K7k"/>
                 <outlet property="textField" destination="3tp-dl-XAJ" id="plj-PT-xc7"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
+        <button id="CBx-On-h7a">
+            <rect key="frame" x="0.0" y="0.0" width="105" height="22"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <buttonCell key="cell" type="check" title="Auto Launch" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="kAm-O1-9gN">
+                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                <font key="font" metaFont="system"/>
+            </buttonCell>
+            <connections>
+                <action selector="autoLaunchAfterLogin:" target="494" id="Cbj-d6-jvN"/>
+            </connections>
+        </button>
     </objects>
 </document>

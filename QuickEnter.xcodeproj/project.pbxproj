@@ -24,6 +24,7 @@
 		34919E8318A8CBEA00D88D7B /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34919E7E18A8CBEA00D88D7B /* DDHotKeyCenter.m */; };
 		34919E8418A8CBEA00D88D7B /* DDHotKeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 34919E8018A8CBEA00D88D7B /* DDHotKeyTextField.m */; };
 		34919E8518A8CBEA00D88D7B /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 34919E8218A8CBEA00D88D7B /* DDHotKeyUtilities.m */; };
+		34919E8B18A8D76500D88D7B /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34919E8A18A8D76500D88D7B /* LaunchAtLoginController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		34919E8018A8CBEA00D88D7B /* DDHotKeyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyTextField.m; sourceTree = "<group>"; };
 		34919E8118A8CBEA00D88D7B /* DDHotKeyUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyUtilities.h; sourceTree = "<group>"; };
 		34919E8218A8CBEA00D88D7B /* DDHotKeyUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyUtilities.m; sourceTree = "<group>"; };
+		34919E8918A8D76500D88D7B /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
+		34919E8A18A8D76500D88D7B /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 		3436BAA618A7830B00CFD0A6 /* QuickEnter */ = {
 			isa = PBXGroup;
 			children = (
+				34919E8918A8D76500D88D7B /* LaunchAtLoginController.h */,
+				34919E8A18A8D76500D88D7B /* LaunchAtLoginController.m */,
 				34919E7D18A8CBEA00D88D7B /* DDHotKeyCenter.h */,
 				34919E7E18A8CBEA00D88D7B /* DDHotKeyCenter.m */,
 				34919E7F18A8CBEA00D88D7B /* DDHotKeyTextField.h */,
@@ -286,6 +291,7 @@
 				34919E8518A8CBEA00D88D7B /* DDHotKeyUtilities.m in Sources */,
 				3436BADE18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m in Sources */,
 				3436BAB418A7830B00CFD0A6 /* QEAppDelegate.m in Sources */,
+				34919E8B18A8D76500D88D7B /* LaunchAtLoginController.m in Sources */,
 				3436BAAD18A7830B00CFD0A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
