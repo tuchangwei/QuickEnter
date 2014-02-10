@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface QEAppDelegate : NSObject <NSApplicationDelegate>
+@interface QEAppDelegate : NSObject <NSApplicationDelegate, NSTextFieldDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-
+@property (strong, nonatomic) NSStatusItem *statusItem;
+@property (weak) IBOutlet NSTextField *textField;
 @end

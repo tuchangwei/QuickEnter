@@ -18,6 +18,8 @@
 		3436BAC118A7830B00CFD0A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3436BAA018A7830B00CFD0A6 /* Cocoa.framework */; };
 		3436BAC918A7830B00CFD0A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3436BAC718A7830B00CFD0A6 /* InfoPlist.strings */; };
 		3436BACB18A7830B00CFD0A6 /* QuickEnterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3436BACA18A7830B00CFD0A6 /* QuickEnterTests.m */; };
+		3436BAD518A7834400CFD0A6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3436BAD418A7834400CFD0A6 /* icon.png */; };
+		3436BADE18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3436BADD18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		3436BAC618A7830B00CFD0A6 /* QuickEnterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickEnterTests-Info.plist"; sourceTree = "<group>"; };
 		3436BAC818A7830B00CFD0A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3436BACA18A7830B00CFD0A6 /* QuickEnterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickEnterTests.m; sourceTree = "<group>"; };
+		3436BAD418A7834400CFD0A6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		3436BADC18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow+canBecomeKeyWindow.h"; sourceTree = "<group>"; };
+		3436BADD18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+canBecomeKeyWindow.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,9 @@
 		3436BAA618A7830B00CFD0A6 /* QuickEnter */ = {
 			isa = PBXGroup;
 			children = (
+				3436BADC18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.h */,
+				3436BADD18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m */,
+				3436BAD418A7834400CFD0A6 /* icon.png */,
 				3436BAB218A7830B00CFD0A6 /* QEAppDelegate.h */,
 				3436BAB318A7830B00CFD0A6 /* QEAppDelegate.m */,
 				3436BAB518A7830B00CFD0A6 /* MainMenu.xib */,
@@ -232,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3436BAAB18A7830B00CFD0A6 /* InfoPlist.strings in Resources */,
+				3436BAD518A7834400CFD0A6 /* icon.png in Resources */,
 				3436BAB918A7830B00CFD0A6 /* Images.xcassets in Resources */,
 				3436BAB118A7830B00CFD0A6 /* Credits.rtf in Resources */,
 				3436BAB718A7830B00CFD0A6 /* MainMenu.xib in Resources */,
@@ -253,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3436BADE18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m in Sources */,
 				3436BAB418A7830B00CFD0A6 /* QEAppDelegate.m in Sources */,
 				3436BAAD18A7830B00CFD0A6 /* main.m in Sources */,
 			);
