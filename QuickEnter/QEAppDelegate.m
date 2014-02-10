@@ -22,12 +22,18 @@
     [self.statusItem setToolTip:@"Quick Enter"];
     
     NSMenu *menu = [[NSMenu alloc] init];
-    NSMenuItem *menuItem = [[NSMenuItem alloc]initWithTitle:@"Quick Enter" action:@selector(menuItemBeClicked:) keyEquivalent:@""];
+    NSMenuItem *menuItem = [[NSMenuItem alloc]initWithTitle:@"Quick Enter    Ctrl+Esc" action:@selector(menuItemBeClicked:) keyEquivalent:@""];
     menuItem.tag = 1;
+    [menu addItem:menuItem];
+    
+    menuItem = [NSMenuItem separatorItem];
     [menu addItem:menuItem];
     
     menuItem = [[NSMenuItem alloc]initWithTitle:@"Auto Launch" action:@selector(menuItemBeClicked:) keyEquivalent:@""];
     [menuItem setView:self.checkBox];
+    [menu addItem:menuItem];
+    
+    menuItem = [NSMenuItem separatorItem];
     [menu addItem:menuItem];
     
     menuItem = [[NSMenuItem alloc]initWithTitle:@"Quit" action:@selector(menuItemBeClicked:) keyEquivalent:@""];
