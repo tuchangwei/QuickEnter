@@ -44,9 +44,15 @@
     
     //launch auto
     self.loginAutoCor = [[LaunchAtLoginController alloc] init];
-    [self.loginAutoCor setLaunchAtLogin:NO];
-    self.checkBox.state = 0;
+}
+
+- (void)awakeFromNib {
     
+    [super awakeFromNib];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    int state = [[defaults objectForKey:@"AutoLaunchKey"] intValue];
+    [self.loginAutoCor setLaunchAtLogin:state];
+    self.checkBox.state = state;
 }
 - (void)applicationDidResignActive:(NSNotification *)notification {
     
@@ -81,6 +87,9 @@
 - (IBAction)autoLaunchAfterLogin:(NSButton *)sender {
     
     [self.loginAutoCor setLaunchAtLogin:sender.state];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@(sender.state) forKey:@"AutoLaunchKey"];
+    [defaults synchronize];
 }
 
 
