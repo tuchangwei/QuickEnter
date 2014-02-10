@@ -20,6 +20,10 @@
 		3436BACB18A7830B00CFD0A6 /* QuickEnterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3436BACA18A7830B00CFD0A6 /* QuickEnterTests.m */; };
 		3436BAD518A7834400CFD0A6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3436BAD418A7834400CFD0A6 /* icon.png */; };
 		3436BADE18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3436BADD18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m */; };
+		34919E7C18A8C87200D88D7B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34919E7B18A8C87200D88D7B /* Carbon.framework */; };
+		34919E8318A8CBEA00D88D7B /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34919E7E18A8CBEA00D88D7B /* DDHotKeyCenter.m */; };
+		34919E8418A8CBEA00D88D7B /* DDHotKeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 34919E8018A8CBEA00D88D7B /* DDHotKeyTextField.m */; };
+		34919E8518A8CBEA00D88D7B /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 34919E8218A8CBEA00D88D7B /* DDHotKeyUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,13 @@
 		3436BAD418A7834400CFD0A6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		3436BADC18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow+canBecomeKeyWindow.h"; sourceTree = "<group>"; };
 		3436BADD18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+canBecomeKeyWindow.m"; sourceTree = "<group>"; };
+		34919E7B18A8C87200D88D7B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		34919E7D18A8CBEA00D88D7B /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
+		34919E7E18A8CBEA00D88D7B /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
+		34919E7F18A8CBEA00D88D7B /* DDHotKeyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyTextField.h; sourceTree = "<group>"; };
+		34919E8018A8CBEA00D88D7B /* DDHotKeyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyTextField.m; sourceTree = "<group>"; };
+		34919E8118A8CBEA00D88D7B /* DDHotKeyUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyUtilities.h; sourceTree = "<group>"; };
+		34919E8218A8CBEA00D88D7B /* DDHotKeyUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34919E7C18A8C87200D88D7B /* Carbon.framework in Frameworks */,
 				3436BAA118A7830B00CFD0A6 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +112,7 @@
 		3436BA9F18A7830B00CFD0A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34919E7B18A8C87200D88D7B /* Carbon.framework */,
 				3436BAA018A7830B00CFD0A6 /* Cocoa.framework */,
 				3436BABF18A7830B00CFD0A6 /* XCTest.framework */,
 				3436BAA218A7830B00CFD0A6 /* Other Frameworks */,
@@ -120,6 +133,12 @@
 		3436BAA618A7830B00CFD0A6 /* QuickEnter */ = {
 			isa = PBXGroup;
 			children = (
+				34919E7D18A8CBEA00D88D7B /* DDHotKeyCenter.h */,
+				34919E7E18A8CBEA00D88D7B /* DDHotKeyCenter.m */,
+				34919E7F18A8CBEA00D88D7B /* DDHotKeyTextField.h */,
+				34919E8018A8CBEA00D88D7B /* DDHotKeyTextField.m */,
+				34919E8118A8CBEA00D88D7B /* DDHotKeyUtilities.h */,
+				34919E8218A8CBEA00D88D7B /* DDHotKeyUtilities.m */,
 				3436BADC18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.h */,
 				3436BADD18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m */,
 				3436BAD418A7834400CFD0A6 /* icon.png */,
@@ -262,6 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34919E8318A8CBEA00D88D7B /* DDHotKeyCenter.m in Sources */,
+				34919E8418A8CBEA00D88D7B /* DDHotKeyTextField.m in Sources */,
+				34919E8518A8CBEA00D88D7B /* DDHotKeyUtilities.m in Sources */,
 				3436BADE18A7D8C800CFD0A6 /* NSWindow+canBecomeKeyWindow.m in Sources */,
 				3436BAB418A7830B00CFD0A6 /* QEAppDelegate.m in Sources */,
 				3436BAAD18A7830B00CFD0A6 /* main.m in Sources */,
@@ -475,6 +497,7 @@
 				3436BAD018A7830B00CFD0A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3436BAD118A7830B00CFD0A6 /* Build configuration list for PBXNativeTarget "QuickEnterTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +506,7 @@
 				3436BAD318A7830B00CFD0A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

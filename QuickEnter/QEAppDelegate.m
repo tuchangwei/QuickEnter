@@ -7,6 +7,8 @@
 //
 
 #import "QEAppDelegate.h"
+#import "DDHotKeyCenter.h"
+#import <Carbon/Carbon.h>
 @implementation QEAppDelegate
 
 #pragma mark Notifications
@@ -20,17 +22,20 @@
     [self.statusItem setToolTip:@"Quick Enter"];
     
     NSMenu *menu = [[NSMenu alloc] init];
-    NSMenuItem *menuItem = [[NSMenuItem alloc]initWithTitle:@"Quick Enter" action:@selector(showMainWindow:) keyEquivalent:@""];
+    NSMenuItem *menuItem = [[NSMenuItem alloc]initWithTitle:@"Quick Enter" action:@selector(menuItemBeClicked:) keyEquivalent:@""];
     menuItem.tag = 1;
     [menu addItem:menuItem];
     
-    menuItem = [[NSMenuItem alloc]initWithTitle:@"Quit" action:@selector(showMainWindow:) keyEquivalent:@""];
+    menuItem = [[NSMenuItem alloc]initWithTitle:@"Quit" action:@selector(menuItemBeClicked:) keyEquivalent:@""];
     menuItem.tag = 2;
     [menu addItem:menuItem];
     
     [self.statusItem setMenu:menu];
     self.textField.delegate = self;
     
+    DDHotKeyCenter *c = [DDHotKeyCenter sharedHotKeyCenter];
+	[c unregisterHotKeyWithKeyCode:kVK_Escape modifierFlags:NSControlKeyMask];
+    [c registerHotKeyWithKeyCode:kVK_Escape modifierFlags:NSControlKeyMask target:self action:@selector(hotkeyWithEvent:) object:nil];
     
 }
 - (void)applicationDidResignActive:(NSNotification *)notification {
@@ -38,7 +43,8 @@
     [self hideTheWindow];
 }
 
-- (void)showMainWindow:(NSMenuItem *)menuItem {
+#pragma mark - User InterAction
+- (void)menuItemBeClicked:(NSMenuItem *)menuItem {
     
     if (menuItem.tag==1) {
        
@@ -48,15 +54,7 @@
         }
         else {
             
-            //The below code makes sure the window in the front of other windows of other apps.
-            [NSApp activateIgnoringOtherApps:YES];
-            [NSApp arrangeInFront:self.window];
-            [self.window orderFront:nil];
-            
-            //The below code makes sure the textField first responder.
-            //When you send a makeKeyWindow message to an NSWindow object, you ensure that it is the key window when the application is active. So I create a class to set self.window can become key window.
-            [self.window makeKeyWindow];
-            [self.window makeFirstResponder:self.textField];
+            [self showTheWindow];
             
         }
         
@@ -70,6 +68,20 @@
     
 }
 
+#pragma mark - logic
+
+- (void)showTheWindow {
+    
+    //The below code makes sure the window in the front of other windows of other apps.
+    [NSApp activateIgnoringOtherApps:YES];
+    [NSApp arrangeInFront:self.window];
+    [self.window orderFront:nil];
+    
+    //The below code makes sure the textField first responder.
+    //When you send a makeKeyWindow message to an NSWindow object, you ensure that it is the key window when the application is active. So I create a class to set self.window can become key window.
+    [self.window makeKeyWindow];
+    [self.window makeFirstResponder:self.textField];
+}
 - (void)hideTheWindow {
     
     [self.textField resignFirstResponder];
@@ -78,6 +90,19 @@
     //make the focus to previous app.
     [NSApp hide:nil];
 
+}
+
+- (void) hotkeyWithEvent:(NSEvent *)hkEvent {
+    
+    if ([self.window isVisible]) {
+        
+        [self hideTheWindow];
+    }
+    else {
+        
+        [self showTheWindow];
+        
+    }
 }
 
 #pragma mark NSTextFieldDelegate
@@ -108,4 +133,6 @@
     [task setArguments:@[command]];
     [task launch];
 }
+
+
 @end
