@@ -1,4 +1,4 @@
 QuickEnter
 ==========
 
-An easy way to open the folder you want in Mac, no need open the terminal, no need click Finder and the next folder as so on.
+An easy way to open the folder you want to in your Mac, no need open the Terminal, no need click the Finder and the next folder as so on.
